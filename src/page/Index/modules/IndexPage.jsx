@@ -37,7 +37,7 @@ export default createModel ({
         RESET_STATE (state, payload) {
             return { ...initState}
           },
-          SET_STATE (state, payload) {
+          SET_STATE (state, payload) { //修改redux中的数据
             Object.keys(payload).forEach( (key) => {
               if (state[key] !== undefined && payload[key] !== undefined) {
                 state[key] = payload[key]
